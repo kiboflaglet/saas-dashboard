@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-surface: #ffffff;
+  --color-background: #F2F6FA;
+  --padding-layout: 32px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    padding: var(--padding-layout);
+    font-size: 14px;
+  }
+}
