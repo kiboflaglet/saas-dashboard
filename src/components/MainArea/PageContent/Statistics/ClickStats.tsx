@@ -11,7 +11,7 @@ const clickStatsData = [
 
 const ClickStats = () => {
   return (
-    <div className="bg-surface rounded-2xl flex-1 flex flex-col  p-4 shadow-[0_2px_40px_rgba(0,0,0,0.1)]">
+    <div className="bg-surface rounded-2xl flex-1 flex flex-col h-auto  p-4 shadow-[0_2px_40px_rgba(0,0,0,0.1)]">
       {clickStatsData.map(item => {
         return (
           <div className='flex justify-between gap-4 items-center'>
@@ -20,7 +20,8 @@ const ClickStats = () => {
             <div className="min-w-0 flex-1">
               <AreaLinearChart increase={item.increase}
                 style={{
-                  maxHeight: '37px',
+                  maxHeight: 'auto',
+                  height: "50px"
                 }}
               />
             </div>

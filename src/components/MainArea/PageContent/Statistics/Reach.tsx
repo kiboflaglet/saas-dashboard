@@ -11,11 +11,12 @@ const chartTabs: { name: string, key: string }[] = [
 
 const Reach = () => {
     return (
-        <div className="w-full h-80  bg-surface rounded-2xl flex items-center justify-center relative shadow-[0_2px_40px_rgba(0,0,0,0.1)]">
+        <div className="w-full h-auto  bg-surface rounded-2xl flex items-center justify-center relative shadow-[0_2px_40px_rgba(0,0,0,0.1)]">
             <AreaLinearChart
                 increase={true}
                 style={{
-                    maxHeight: '70vh'
+                    maxHeight: 'auto',
+                    height: "100%"
                 }}
             />
             <div className="absolute top-0 px-4 py-2 w-full z-10">

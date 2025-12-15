@@ -3,11 +3,12 @@ import AreaLinearChart from '../_common/AreaChart'
 
 const AgeGroup = () => {
     return (
-        <div className='bg-surface relative h-43.5 rounded-2xl w-full flex items-center justify-center shadow-[0_2px_40px_rgba(0,0,0,0.1)]'>
+        <div className='bg-surface relative h-auto rounded-2xl w-full flex items-center justify-center shadow-[0_2px_40px_rgba(0,0,0,0.1)]'>
             <AreaLinearChart
                 increase={true}
                 style={{
-                    maxHeight: '10vh'
+                    maxHeight: 'auto',
+                    height: "20vh"
                 }}
             />
             <div className="absolute top-0 p-4 w-full z-10">
