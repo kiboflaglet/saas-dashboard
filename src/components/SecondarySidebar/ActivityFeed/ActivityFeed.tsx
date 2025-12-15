@@ -102,7 +102,7 @@ const activityData: ActivityType[] = [
 
 const ActivityFeed = () => {
   return (
-    <div className="p-4 py-0 rounded-2xl bg-surface h-[calc(100vh-var(--padding-layout)*2-80px)] mt-6 flex flex-col">
+    <div className="p-4 py-0 rounded-2xl bg-surface h-[calc(100vh-var(--padding-layout)*2-80px)] mt-6 flex flex-col shadow-[0_2px_40px_rgba(0,0,0,0.1)]">
 
       <Tabs.Root
         className="flex w-full flex-col h-full"

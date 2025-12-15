@@ -6,9 +6,9 @@ function App() {
 
   return (
     <div className="flex gap-6">
-      <PrimarySidebar />
+      <PrimarySidebar className='sticky top-(--padding-layout)' />
       <MainArea className='flex-1' />
-      <SecondarySidebar />
+      <SecondarySidebar className='sticky top-(--padding-layout)'  />
     </div>
   )
 }

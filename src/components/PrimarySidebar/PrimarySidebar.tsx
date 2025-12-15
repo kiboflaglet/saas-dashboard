@@ -1,5 +1,6 @@
 import { Calendar, ChartLine, Dot, LayoutDashboard, LogOut, MessageCircle, Wallet } from "lucide-react";
 import { cn } from "../../common/utilities/cn";
+import type { HTMLAttributes } from "react";
 
 type MenuItem = {
     title: string
@@ -18,11 +19,11 @@ const menuList: MenuItem[] = [
 const currentPage = "/calendar"
 
 
-const PrimarySidebar = () => {
+const PrimarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
 
 
     return (
-        <div className="rounded-2xl bg-surface h-[calc(100vh-var(--padding-layout)*2)]  w-60 p-6 flex flex-col">
+        <div className={cn("rounded-2xl bg-surface   h-[calc(100vh-var(--padding-layout)*2)]  w-60 p-6 flex flex-col shadow-[0_2px_40px_rgba(0,0,0,0.1)] ", className)} >
 
             <div className="flex flex-col flex-1">
                 <div>
