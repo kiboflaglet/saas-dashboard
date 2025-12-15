@@ -1,13 +1,14 @@
 import { Bell, ChevronDown, ChevronUp, Moon, Mountain } from 'lucide-react'
 import { DropdownMenu } from 'radix-ui'
 import { useState } from 'react'
+import ToggleTheme from './ToggleTheme'
 
 
 const UserControls = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <div className='flex gap-4 items-center justify-between h-14'>
-            <Moon />
+            <ToggleTheme />
             <Bell />
             <DropdownMenu.Root onOpenChange={setMenuOpen} modal={false} >
                 <DropdownMenu.Trigger asChild>

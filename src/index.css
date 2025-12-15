@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
 @theme {
   --color-surface: #ffffff;
   --color-background: #F2F6FA;
   --padding-layout: 32px;
+}
+
+
+[data-theme="dark"] {
+  --color-surface: #000000;
+  --color-background: #202020;
+  color: #ffffff
 }
 
 @layer base {
