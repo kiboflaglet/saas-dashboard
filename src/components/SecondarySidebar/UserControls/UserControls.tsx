@@ -1,4 +1,4 @@
-import { Bell, ChevronDown, ChevronUp, Moon, Mountain } from 'lucide-react'
+import { Bell, ChevronDown, ChevronUp, Mountain } from 'lucide-react'
 import { DropdownMenu } from 'radix-ui'
 import { useState } from 'react'
 import ToggleTheme from './ToggleTheme'
@@ -31,25 +31,16 @@ const UserControls = () => {
                         sideOffset={5}
                     >
                         <DropdownMenu.Item className="group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none text-violet11 outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[disabled]:text-mauve8 data-[highlighted]:text-violet1">
-                            New Tab{" "}
-                            <div className="ml-auto pl-5 text-mauve11 group-data-[disabled]:text-mauve8 group-data-[highlighted]:text-white">
-                                ⌘+T
-                            </div>
+                            Profile{" "}
                         </DropdownMenu.Item>
                         <DropdownMenu.Item className="group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none text-violet11 outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[disabled]:text-mauve8 data-[highlighted]:text-violet1">
-                            New Window{" "}
-                            <div className="ml-auto pl-5 text-mauve11 group-data-[disabled]:text-mauve8 group-data-[highlighted]:text-white">
-                                ⌘+N
-                            </div>
+                            Upgrade{" "}
                         </DropdownMenu.Item>
                         <DropdownMenu.Item
                             className="group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none text-violet11 outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[disabled]:text-mauve8 data-[highlighted]:text-violet1"
                             disabled
                         >
-                            New Private Window{" "}
-                            <div className="ml-auto pl-5 text-mauve11 group-data-[disabled]:text-mauve8 group-data-[highlighted]:text-white">
-                                ⇧+⌘+N
-                            </div>
+                            Settings{" "}
                         </DropdownMenu.Item>
                     </DropdownMenu.Content>
                 </DropdownMenu.Portal>

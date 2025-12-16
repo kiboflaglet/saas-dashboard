@@ -1,5 +1,5 @@
-import { Circle, Dot, Mountain } from "lucide-react"
-import { Tabs } from "radix-ui"
+import { Mountain } from "lucide-react";
+import { Tabs } from "radix-ui";
 
 const tabs: { name: string, key: string }[] = [
   { name: "Activity feed", key: "activity_feed" },

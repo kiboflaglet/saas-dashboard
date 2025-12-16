@@ -1,6 +1,5 @@
-import React from 'react'
-import { useTheme } from '../../../hooks/useTheme'
 import { Moon, Sun } from 'lucide-react'
+import { useTheme } from '../../../hooks/useTheme'
 
 const ToggleTheme = () => {
     const { theme, toggleTheme } = useTheme()

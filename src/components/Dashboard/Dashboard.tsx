@@ -1,9 +1,9 @@
 import React from 'react'
 import TopNavigation from './TopNavigation'
-import { cn } from '../../common/utilities/cn'
 import PageContent from './PageContent/PageContent'
+import { cn } from '../../common/utilities/cn'
 
-const MainArea = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
+const Dashboard = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
    <div className={cn("w-full", className)}>
       <TopNavigation />
@@ -12,4 +12,4 @@ const MainArea = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
   )
 }
 
-export default MainArea
+export default Dashboard

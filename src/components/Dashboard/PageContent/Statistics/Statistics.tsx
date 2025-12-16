@@ -26,7 +26,6 @@ const Statistics = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
                         <NewFollowers />
                     </div>
                     <ClickStats />
-
                 </div>
             </div>
         </div>

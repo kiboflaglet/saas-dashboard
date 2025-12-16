@@ -1,8 +1,8 @@
 import { Bookmark, Heart, MessageCircle, MoreHorizontal } from 'lucide-react'
 import { Tabs } from 'radix-ui'
-import React, { type HTMLAttributes } from 'react'
+import { type HTMLAttributes } from 'react'
 import { cn } from '../../../../common/utilities/cn'
-import { posts } from '../_common/data'
+import { posts } from '../../_common/data'
 
 const chartTabs: { name: string, key: string }[] = [
     { name: "Latest posts", key: "latest_posts" },

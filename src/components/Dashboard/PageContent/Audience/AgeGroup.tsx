@@ -1,11 +1,14 @@
 import { MoreHorizontal } from 'lucide-react'
-import AreaLinearChart from '../_common/AreaChart'
+import AreaLinearChart from '../../_common/AreaChart'
+import { ageGroupData } from '../../_common/dashboardData'
 
 const AgeGroup = () => {
     return (
         <div className='bg-surface relative h-auto rounded-2xl w-full flex items-center justify-center shadow-[0_2px_40px_rgba(0,0,0,0.1)]'>
             <AreaLinearChart
-                increase={true}
+                data={ageGroupData.series}
+                labelRow
+                increase={ageGroupData.summary.increase}
                 style={{
                     maxHeight: 'auto',
                     height: "20vh"

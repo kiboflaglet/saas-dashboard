@@ -1,11 +1,12 @@
-import React from 'react'
-import AreaLinearChart from '../_common/AreaChart'
 import { ArrowDown, ArrowUp } from 'lucide-react'
+import { numberFormatter } from '../../../../common/utilities/formatters'
+import { emailButtonData, linkClicksData, profileVisitsData } from '../../_common/dashboardData'
+import AreaLinearChart from '../../_common/AreaChart'
 
 const clickStatsData = [
-  { title: "Profile visits", visits: "22.1k", increase: true },
-  { title: "Link clicks", visits: "1.7k", increase: false },
-  { title: "EmailButton", visits: "596", increase: true },
+  { title: "Profile visits", visits: "22.1k", data: profileVisitsData },
+  { title: "Link clicks", visits: "1.7k", data: linkClicksData },
+  { title: "EmailButton", visits: "596", data: emailButtonData },
 ]
 
 
@@ -18,7 +19,9 @@ const ClickStats = () => {
 
             <span className='w-20 shrink-0'>{item.title}</span>
             <div className="min-w-0 flex-1">
-              <AreaLinearChart increase={item.increase}
+              <AreaLinearChart
+                data={item.data.series}
+                increase={item.data.summary.increase}
                 style={{
                   maxHeight: 'auto',
                   height: "50px"
@@ -27,8 +30,8 @@ const ClickStats = () => {
             </div>
 
             <div className='w-16 flex items-center gap-1 shrink-0'>
-              <span className='font-bold'>{item.visits}</span>
-              {item.increase ? (
+              <span className='font-bold'>{numberFormatter(item.data.summary.current)}</span>
+              {item.data.summary.increase ? (
                 <ArrowUp className='w-4 h-4 text-green-400' />) : (
                 <ArrowDown className='w-4 h-4 text-red-400' />
               )}
