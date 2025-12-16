@@ -1,7 +1,7 @@
 import { Heart, MessageCircle, UserPlus, Users } from 'lucide-react'
 import React from 'react'
 import { cn } from '../../../../common/utilities/cn'
-import { statsOverviewData } from '../../_common/dashboardData'
+import { statsOverviewData } from '../../_common/data'
 import { numberFormatter } from '../../../../common/utilities/formatters'
 
 const StatsOverviewData: StatsType[] = [

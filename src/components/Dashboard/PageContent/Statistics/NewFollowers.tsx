@@ -1,7 +1,7 @@
 import { MoreHorizontal } from 'lucide-react'
 import { cn } from '../../../../common/utilities/cn'
 import AreaLinearChart from '../../_common/AreaChart'
-import { newFollowersData } from '../../_common/dashboardData'
+import { newFollowersData } from '../../_common/data'
 
 const NewFollowers = () => {
   return (

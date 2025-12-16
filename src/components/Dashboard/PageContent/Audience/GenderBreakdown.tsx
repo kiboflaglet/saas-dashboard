@@ -4,7 +4,7 @@ import { Cell, Pie, PieChart, Tooltip, type TooltipProps } from 'recharts';
 import type { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent';
 import type { TooltipPayload } from 'recharts/types/state/tooltipSlice';
 import { numberFormatter } from '../../../../common/utilities/formatters';
-import { genderBreakdownData } from '../../_common/dashboardData';
+import { genderBreakdownData } from '../../_common/data';
 
 
 const COLORS = [

@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { cn } from '../../../../common/utilities/cn';
 import { numberFormatter } from '../../../../common/utilities/formatters';
 import AreaLinearChart from '../../_common/AreaChart';
-import { impressionsData, newFollowersData, reachData } from '../../_common/dashboardData';
+import { impressionsData, newFollowersData, reachData } from '../../_common/data';
 
-const chartTabs: { name: string, key: string }[] = [
+const chartTabs = [
     { name: "Reach", key: "reach" },
     { name: "Impressions", key: "impressions" },
     { name: "New followers", key: "new_followers" },

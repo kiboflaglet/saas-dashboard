@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUp } from 'lucide-react'
 import { numberFormatter } from '../../../../common/utilities/formatters'
-import { emailButtonData, linkClicksData, profileVisitsData } from '../../_common/dashboardData'
+import { emailButtonData, linkClicksData, profileVisitsData } from '../../_common/data'
 import AreaLinearChart from '../../_common/AreaChart'
 
 const clickStatsData = [

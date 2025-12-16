@@ -1,104 +1,13 @@
 import { Mountain } from "lucide-react";
 import { Tabs } from "radix-ui";
+import { activityData } from "../../Dashboard/_common/data";
+import type { ActivityFeedType } from "../types";
 
-const tabs: { name: string, key: string }[] = [
+const tabs = [
   { name: "Activity feed", key: "activity_feed" },
   { name: "Mentions", key: "mentions" },
 ]
 
-type ActivityType = {
-  userName: string;
-  time: string;
-  isActive: boolean;
-  message?: string
-}
-
-const activityData: ActivityType[] = [
-  {
-    userName: "DercoMani",
-    time: "2 mins ago",
-    isActive: false,
-    message: 'Commented “Yes, I have been there and I would love to go there again! Do you ...”'
-  },
-  {
-    userName: "MiaMore",
-    time: "9 mins ago",
-    isActive: true,
-    message: 'Started following you'
-  },
-  {
-    userName: "RinaMenol",
-    time: "11 mins ago",
-    isActive: false,
-    message: 'Started following you'
-  },
-  {
-    userName: "IngaV",
-    time: "23 mins ago",
-    isActive: false,
-    message: 'Started following you'
-  },
-  {
-    userName: "DercoMani",
-    time: "2 mins ago",
-    isActive: false,
-    message: 'Commented “Yes, I have been there and I would love to go there again! Do you ...”'
-  },
-  {
-    userName: "HouseHoleJohn",
-    time: "49 mins ago",
-    isActive: true,
-    message: 'Started following you'
-  },
-  {
-    userName: "RinaMenol",
-    time: "1h ago",
-    isActive: false,
-    message: 'Commented “ What airline do you always fly with? I’m a Delta man myself but you ...”'
-  },
-  {
-    userName: "DercoMani",
-    time: "2 mins ago",
-    isActive: false,
-    message: 'Commented “Yes, I have been there and I would love to go there again! Do you ...”'
-  },
-  {
-    userName: "MiaMore",
-    time: "9 mins ago",
-    isActive: true,
-    message: 'Started following you'
-  },
-  {
-    userName: "RinaMenol",
-    time: "11 mins ago",
-    isActive: false,
-    message: 'Started following you'
-  },
-  {
-    userName: "IngaV",
-    time: "23 mins ago",
-    isActive: false,
-    message: 'Started following you'
-  },
-  {
-    userName: "DercoMani",
-    time: "2 mins ago",
-    isActive: false,
-    message: 'Commented “Yes, I have been there and I would love to go there again! Do you ...”'
-  },
-  {
-    userName: "HouseHoleJohn",
-    time: "49 mins ago",
-    isActive: true,
-    message: 'Started following you'
-  },
-  {
-    userName: "RinaMenol",
-    time: "1h ago",
-    isActive: false,
-    message: 'Commented “ What airline do you always fly with? I’m a Delta man myself but you ...”'
-  },
-]
 
 const ActivityFeed = () => {
   return (
@@ -151,7 +60,7 @@ const ActivityItem = ({
   userName,
   time,
   message = ""
-}: ActivityType) => {
+}: ActivityFeedType) => {
   return (
     <div className="p-2 bg-surface flex items-start gap-2.5 rounded-lg   justify-start cursor-pointer">
 

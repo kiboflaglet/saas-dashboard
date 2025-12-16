@@ -3,6 +3,7 @@ import { Tabs } from 'radix-ui'
 import { type HTMLAttributes } from 'react'
 import { cn } from '../../../../common/utilities/cn'
 import { posts } from '../../_common/data'
+import { format } from 'date-fns'
 
 const chartTabs: { name: string, key: string }[] = [
     { name: "Latest posts", key: "latest_posts" },
@@ -53,7 +54,7 @@ const Posts = ({ className }: HTMLAttributes<HTMLDivElement>) => {
                             <div className="flex justify-start gap-4">
                                 <div className='flex items-center'>
                                     <span className="[writing-mode:vertical-rl] rotate-180 text-xs">
-                                        {item.date}
+                                        {format(new Date(item.createdAt), "MMMM d")}
                                     </span>
                                     <div className="rounded-3xl w-25 h-25 ml-2 bg-green-400"></div>
                                 </div>

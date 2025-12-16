@@ -1,6 +1,6 @@
 import { MoreHorizontal } from 'lucide-react'
 import AreaLinearChart from '../../_common/AreaChart'
-import { ageGroupData } from '../../_common/dashboardData'
+import { ageGroupData } from '../../_common/data'
 
 const AgeGroup = () => {
     return (

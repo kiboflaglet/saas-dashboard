@@ -16,7 +16,7 @@ const menuList: MenuItem[] = [
     { title: "Chat", icon: MessageCircle, pathName: "/chat" },
 ]
 
-const currentPage = "/calendar"
+const currentPage = "/dashboard"
 
 
 const PrimarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
