@@ -1,7 +1,7 @@
-import { Calendar, ChartLine, Dot, LayoutDashboard, LogOut, MessageCircle, SendHorizonal, Wallet } from "lucide-react";
-import { cn } from "../../common/utilities/cn";
+import { Calendar, Dot, LayoutDashboard, LogOut, MessageCircle, SendHorizonal, Wallet } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import { useLocation, useNavigate } from "react-router";
+import { cn } from "../../common/utilities/cn";
 
 type MenuItem = {
     title: string

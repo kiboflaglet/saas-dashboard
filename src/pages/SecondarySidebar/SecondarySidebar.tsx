@@ -7,7 +7,7 @@ const SecondarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={cn(
-        "w-80 h-[calc(100vh-var(--padding-layout)*2)] sticky top-(--padding-layout)",
+        " w-80 h-[calc(100vh-var(--padding-layout)*2)] sticky top-(--padding-layout)",
         className
       )}
     >

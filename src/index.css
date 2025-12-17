@@ -17,6 +17,10 @@
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+    overscroll-behavior: none;
+  }
   body {
     background-color: var(--color-background);
     padding: var(--padding-layout);
