@@ -1,6 +1,7 @@
-import { Calendar, ChartLine, Dot, LayoutDashboard, LogOut, MessageCircle, Wallet } from "lucide-react";
+import { Calendar, ChartLine, Dot, LayoutDashboard, LogOut, MessageCircle, SendHorizonal, Wallet } from "lucide-react";
 import { cn } from "../../common/utilities/cn";
 import type { HTMLAttributes } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 type MenuItem = {
     title: string
@@ -9,17 +10,21 @@ type MenuItem = {
 }
 
 const menuList: MenuItem[] = [
-    { title: "Dashboard", icon: LayoutDashboard, pathName: "/dashboard" },
+    { title: "Dashboard", icon: LayoutDashboard, pathName: "/" },
     { title: "Calendar", icon: Calendar, pathName: "/calendar" },
-    { title: "Analytics", icon: ChartLine, pathName: "/analytics" },
     { title: "Wallet", icon: Wallet, pathName: "/wallet" },
     { title: "Chat", icon: MessageCircle, pathName: "/chat" },
+    { title: "Posts", icon: SendHorizonal, pathName: "/posts" },
 ]
 
-const currentPage = "/dashboard"
 
 
 const PrimarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
+
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const currentPage = location.pathname
 
 
     return (
@@ -33,10 +38,11 @@ const PrimarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
                         {menuList.map(item => {
                             const Icon = item.icon
                             return (
-                                <div
+                                <button
+                                    onClick={() => {navigate(item.pathName)}}
                                     key={item.title}
                                     className={cn(
-                                        "flex items-center py-1.5 justify-between",
+                                        "flex items-center py-1.5 justify-between cursor-pointer",
                                         currentPage === item.pathName && "font-bold"
                                     )}
                                 >
@@ -45,7 +51,7 @@ const PrimarySidebar = ({ className }: HTMLAttributes<HTMLDivElement>) => {
                                         <span className="text-lg">{item.title}</span>
                                     </div>
                                     {currentPage === item.pathName && <Dot />}
-                                </div>
+                                </button>
                             )
                         })}
                     </div>
